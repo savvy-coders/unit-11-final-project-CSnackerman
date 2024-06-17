@@ -1,0 +1,155 @@
+/* baseline */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 100ms ease-in-out;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* modify theme */
+
+@media (prefers-color-scheme: dark) {
+  /* dark-theme */
+  body {
+    --fg-primary-color: #dddddd;
+    --fg-secondary-color: #555;
+    --bg-primary-color: #1a2129;
+    --bg-secondary-color: darkcyan;
+    --btn-border: 1px solid cyan;
+    --anchor-hover: cyan;
+  }
+  body.light-theme {
+    --fg-primary-color: #222;
+    --fg-secondary-color: #555;
+    --bg-primary-color: #cfe4d3;
+    --bg-secondary-color: rgb(179, 199, 199);
+    --btn-border: 1px solid #3b3b3b;
+    --anchor-hover: blue;
+  }
+}
+
+/** styles **/
+
+/* body */
+
+body {
+  margin: 0;
+  background: var(--bg-primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+}
+
+body *:not(button) {
+  color: var(--fg-primary-color);
+}
+
+/* header */
+
+header {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* button */
+
+button {
+  width: fit-content;
+  margin: 3px;
+  padding: 0.3rem;
+  background-color: var(--bg-secondary-color);
+  border: var(--btn-border);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+button:active {
+  filter: hue-rotate(90deg) brightness(70%);
+}
+
+button:hover:not(:active) {
+  filter: hue-rotate(90deg);
+}
+
+/* theme button */
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* anchors */
+
+a:hover {
+  color: var(--anchor-hover);
+}
+
+/* img */
+img {
+  border-radius: 25px;
+  border: 3px solid darkslategrey;
+}
+
+#my-pic {
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 0px -70px;
+}
+
+/* content */
+
+#vacation-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* footer */
+
+footer {
+  padding: 1rem;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 10rem;
+  text-align: center;
+  background-color: var(--bg-secondary-color);
+  font-weight: bold;
+}
+
+/* list */
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.2rem;
+  font-size: 1.4rem;
+}
+
+/* heading */
+
+h1 {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+

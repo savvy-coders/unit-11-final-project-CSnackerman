@@ -4,9 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js" defer></script>
+    <script type="module" src="theme.js" defer></script>
   </head>
+  <button id="theme-toggle">Toggle Theme</button>
   <body>
-    <script type="module" src="script.js"></script>
+    <header>
+      Colby Ackerman's Portfolio
+    </header>
+    <button id="timeCheckBtn">Check the Time</button>
+    <div id="time"></div>
+    <div id="about-me" class="content">
+      <h1>Who am I?</h1>
+      <img id="my-pic" src="/selfie.jpg" alt="selfie" width="250"/>
+      <p>
+        Hi! I'm Colby Ackerman from St. Louis, Missouri. 
+        I like to go for bike rides and play video games with friends.
+        I became interested in software development from playing games at a young age.
+        It made me want to learn how to make them. Over time, I have come to love programming in the forms
+        of web and game development. I want to learn about the full stack and it's many different forms
+        for both of those types of development to express my creativity.
+      </p>
+    </div>
+    <div id="now-learning" class="content">
+      <h1>I Am Currently Learning...</h1>
+      <ul>
+        <li>Full-stack Web Development</li>
+        <li>MongoDB</li>
+        <li>Supabase</li>
+        <li>PostgreSQL</li>
+        <li>OAuth/Social Login</li>
+        <li>ThreeJS</li>
+      </ul>
+    </div>
+    <footer>
+      <p>Created by Colby Ackerman 2024</p>
+      <a href="/page2.html">My Vacation Spots</a>
+    </footer>
   </body>
 </html>
